@@ -32,9 +32,14 @@ The Python notebook demonstrates the differences between SARSA(λ) and Q-Learnin
 ### Game Versions:
 
 1. **Version 1**: Simple environment with a single final state that gives a positive reward.
+![Version 1](https://github.com/user-attachments/assets/16ac2443-378a-41f8-b475-3d2886071a4b)
 2. **Version 2**: Added intermediate rewards (+2) on specific states, which disappear once collected.
+![Version 2](https://github.com/user-attachments/assets/f4b46603-8399-47de-9933-47b4e8346d6c)
 3. **Version 3**: Introduced new final states with negative rewards, representing ghosts (non-moving).
+![Version 3](https://github.com/user-attachments/assets/6d5344f2-3ac3-4477-99f4-5ab48d8f11e0)
 4. **Version 4**: Randomized state positions and rewards, with a fixed final positive reward and agent starting position.
+![Version 4](https://github.com/user-attachments/assets/6427055f-6433-4bda-8034-8acf0dedd03a)
+
 
 ### Results:
 
@@ -43,6 +48,9 @@ For each game version and *λ* value, the following results were shown:
 - Average TD error over 100 episodes
 - Final policy
 - Heatmap of eligibility traces
+
+
+![AMLheatmap](https://github.com/user-attachments/assets/b7860355-18f8-4b08-b0d2-2007b19d31f4)
 
 The notebook presents the results of the experiments, comparing average rewards, TD errors, and the number of steps taken for each algorithm with different *λ* values.
 
@@ -57,13 +65,5 @@ However, the same cannot be said about the **TD error**. From the plot, we can o
 From the **heatmap plots**, we can see that the eligibility trace becomes longer as *λ* increases, showing a greater influence of past states or actions on the current value updates.
 
 Finally, from the **table of results**, we can clearly see that **Q-Learning** outperforms **SARSA** overall, with higher rewards, fewer steps, and lower TD error. Although **SARSA** sometimes achieves better results with *λ=0*, **Q-Learning** tends to yield slightly better performance most of the time.
-
----
-
-## Acknowledgments
-
-- **SARSA(λ)**: Algorithm for on-policy reinforcement learning with eligibility traces.
-- **Q-Learning(λ)**: Off-policy reinforcement learning algorithm with eligibility traces.
-- **PacMan**: Simplified environment used to illustrate RL algorithms.
-
+![AMLTable](https://github.com/user-attachments/assets/2ea345aa-1dee-405f-a4f5-3ad464163eac)
 
